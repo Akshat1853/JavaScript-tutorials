@@ -81,6 +81,7 @@ d = undefined;
 
 console.log(typeof 12);
 console.log(typeof "harsh");
+console.log(typeof []); // ans: object
 console.log(typeof ' ');
 console.log(typeof NaN) // NaN full form -is not a number and it's type is number.
 
