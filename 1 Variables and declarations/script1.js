@@ -48,10 +48,10 @@ function abcd() {
 // redeclaration is possible with var but not with let
 
 var f = 32;
-f = 20;
+var f = 20;
 
 let b = 32;
-b = 20;
+// let b = 20;
 
 
 
@@ -91,7 +91,7 @@ b = 20;
 // var h = 24;
 
 // split like
-// var h = undefined;
+// var h;
 // h = 24;
 
 // this works and shows undefined
@@ -99,7 +99,7 @@ console.log(i);
 var i = 13;
 
 // because in the background it is working like this,
-// var i = undefined;
+// var i;
 // console.log(i);
 // i = 13;
 
