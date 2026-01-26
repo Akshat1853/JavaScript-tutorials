@@ -115,6 +115,7 @@ console.log("5" - 1) // ans : 4 because + can do concatenation and addition but 
 // Truthy vs falsy values
 
 // 0 false "" null defined NaN document.all ye sari values falsy hai baaki sari truthy hai
+// Empty array or empty object comes under truthy values
 
 // how to check if any value if truth or false ?
 // just put !! in front of any value in the console and you can check
