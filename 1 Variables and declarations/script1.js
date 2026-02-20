@@ -30,7 +30,10 @@ function abcd() {
     {
         var d = 22;
     }
+    console.log(d);
 }
+
+abcd();
 
 // block scope, valid for let and const variables but not for var
 // since var are functional scoped and a block is not a function therefore this e variable
@@ -51,7 +54,7 @@ var f = 32;
 var f = 20;
 
 let b = 32;
-// let b = 20;
+// let b = 20;  // gives error 
 
 
 
@@ -64,6 +67,7 @@ let b = 32;
 
 // it will give error like : 
 // Uncaught ReferenceError: Cannot access 'g' before initialization
+
 // but according to logic and comparing with other languages the error should be like :
 // Uncaught ReferenceError: g is not defined
 
@@ -114,7 +118,8 @@ var i = 13;
 // until the declaration line is executed. var don't have temporal dead zone
 
 // var is hoisted and initialized to undefined
-// let is hoisted but NOT initialized
+// let is hoisted but not initialized
+// const is hoisted but not initialized
 
 // What actually happens:
 // j is hoisted to the top of the block
