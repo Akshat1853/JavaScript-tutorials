@@ -27,6 +27,7 @@ console.log(marks);
 // Ans: unshift() without arguments is a no-op (no operation) that returns the
 // length of the array.
 
+
 // Splice method
 
 // The splice() method in JavaScript is used to add, remove, or replace elements in an array.
@@ -52,6 +53,7 @@ console.log(marks);
 // Removes 2 elements and inserts 9, 8.
 marks.splice(2, 2, 9, 8);
 console.log(marks);
+
 
 // Slice Method
 
@@ -204,6 +206,7 @@ console.log(newA);
 // Output: [1,2,3]
 // Why? Because non-zero values are truthy.
 
+
 // Reduce function
 
 // Reduces array into a single value (number, string, array, object).
@@ -219,6 +222,7 @@ let arr1 = [1, 2, 3, 4];
 let sum = arr.reduce((acc, curr) => {
   return acc + curr;
 }, 0);
+
 
 // Find method
 
@@ -323,6 +327,7 @@ console.log(c); // 30
 
 // Using spread operator
 let arr6 = [1, 2, 3, 4, 5];
+let arr7 = [...arr6]
 let [first, second, ...rest] = arr6;
 
 console.log(first);  // 1

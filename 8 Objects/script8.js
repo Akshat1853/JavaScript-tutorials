@@ -134,3 +134,17 @@ let newUser = {};
 
 // With Optional Chaining
 console.log(newUser.address?.city); // undefined
+
+
+// use Object.entries() to print all key-value pairs as:
+// title : JavaScript
+// duration : 4 Weeks
+
+const course = {
+  title : "JavaScript",
+  duration : "4 Weeks",
+};
+
+Object.entries(course).forEach((val) => {
+  console.log(val[0] + ": " + val[1]);
+})

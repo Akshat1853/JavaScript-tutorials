@@ -163,3 +163,19 @@ function getScores(...val){
 
 console.log(getScores(10, 12, 15, 18));
 
+
+// Predict the output of this closure
+
+function outer() {
+    let count = 0;
+
+    return function(){
+        count++;
+        console.log(count);
+    };
+}
+
+const counter = outer();
+counter();
+counter();
+
