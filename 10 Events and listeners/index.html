@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Makes layout responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* Universal reset for consistent UI */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Gilroy";
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Common container used multiple times */
+      #main {
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #222;
+      }
+
+      /* 🔴 ONLY CHANGE: last main should stack items */
+      #main:last-of-type {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h2 {
+        color: #555;
+        font-size: 10rem;
+        font-weight: 300;
+        user-select: none; /* Prevents selection while typing */
+      }
+
+      /* Hidden file input for custom UI */
+      #fileinput {
+        display: none;
+      }
+
+      /* Styled upload button */
+      #btn {
+        padding: 12px 12px;
+        background-color: rgb(41, 143, 114);
+        color: white;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      #btn:hover {
+        background-color: rgb(24, 82, 66);
+      }
+
+      /* Form inputs */
+      #formInp {
+        display: block;
+        margin-bottom: 10px;
+        padding: 6px;
+      }
+
+      /* Card generated dynamically via JS */
+      .card {
+        max-width: 300px;
+        padding: 20px;
+        border: 1px solid #555;
+        color: white;
+        display: inline-block;
+        margin-top: 40px;
+        border-radius: 10px;
+      }
+
+      /* Profile image container */
+      .profile {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+
+      .profile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Text spacing inside card */
+      .card h3,
+      .card h5,
+      .card p {
+        margin-bottom: 8px;
+        overflow-wrap: break-word;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Click event demo -->
+    <h1>apple</h1>
+
+    <!-- Paragraph click event -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis ut
+      quisquam velit accusantium architecto doloribus labore corrupti aut,
+      perferendis repudiandae molestiae omnis blanditiis?
+    </p>
+
+    <!-- Input event demo -->
+    <input type="text" placeholder="name" />
+
+    <!-- Change event demo -->
+    <h3 id="device">Select yor device</h3>
+    <select>
+      <option selected disabled>Select your device</option>
+      <option value="samsung">Samsung</option>
+      <option value="mi">Xiomi</option>
+      <option value="apple">Apple Iphone</option>
+      <option value="oppo">Oppo</option>
+    </select>
+
+    <!-- Keyboard event demo -->
+    <div id="main">
+      <h2>p</h2>
+    </div>
+
+    <!-- File upload section -->
+    <div id="main">
+      <input id="fileinput" type="file" />
+      <div id="btn">Upload File</div>
+    </div>
+
+    <!-- Form to create cards dynamically -->
+    <div id="main">
+      <form action="">
+        <input id="formInp" type="text" placeholder="profile pic" />
+        <input id="formInp" type="text" placeholder="name" />
+        <input id="formInp" type="text" placeholder="occupation" />
+        <input id="formInp" type="text" placeholder="info" />
+        <input id="formInp" type="submit" />
+      </form>
+    </div>
+
+    <!-- External JS file -->
+    <script src="script10.js"></script>
+  </body>
+</html>
