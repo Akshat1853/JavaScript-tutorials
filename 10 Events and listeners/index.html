@@ -19,6 +19,7 @@
       body {
         width: 100%;
         height: 100%;
+        padding: 30px;
       }
 
       /* Common container used multiple times */
@@ -104,6 +105,83 @@
         margin-bottom: 8px;
         overflow-wrap: break-word;
       }
+
+      #abcd {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        position: block;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+      }
+
+      #main2 {
+        width: 100%;
+        height: 100%;
+        background-color: #222;
+      }
+
+      #nav {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #444;
+      }
+
+      a {
+        color: white !important;
+      }
+
+      button {
+        padding: 12px 22px;
+        background-color: red;
+        border-radius: 5px;
+        border: none;
+        font-weight: 600;
+        font-size: 14px;
+        color: white;
+      }
+
+      .lt {
+        text-decoration: line-through;
+      }
+
+      .a {
+        width: 80%;
+        height: 80%;
+        background-color: gold;
+      }
+
+      .b {
+        width: 80%;
+        height: 80%;
+        background-color: green;
+      }
+
+      .c {
+        width: 80%;
+        height: 80%;
+        background-color: purple;
+      }
+
+      .d {
+        width: 80%;
+        height: 80%;
+        background-color: blue;
+      }
+
+      .e {
+        width: 80%;
+        height: 80%;
+        background-color: grey;
+      }
+
+      .f {
+        width: 80%;
+        height: 80%;
+        background-color: black;
+      }
     </style>
   </head>
 
@@ -151,6 +229,40 @@
         <input id="formInp" type="text" placeholder="info" />
         <input id="formInp" type="submit" />
       </form>
+    </div>
+
+    <div id="abcd"></div>
+
+    <div id="main2">
+      <div id="nav">
+        <a href="">Home</a>
+        <a href="">about</a>
+        <button>Click and Follow</button>
+      </div>
+    </div>
+
+    <ul>
+      <li>Apple</li>
+      <li>guava</li>
+      <li>Grapes</li>
+      <li>Banana</li>
+      <li>Mango</li>
+    </ul>
+
+    <div class="a">
+      <div class="b">
+        <div class="c">
+          <button id="btn2">Click me</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="d">
+      <div class="e">
+        <div class="f">
+          <button id="btn3">Click me</button>
+        </div>
+      </div>
     </div>
 
     <!-- External JS file -->

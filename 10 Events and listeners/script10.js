@@ -130,3 +130,107 @@ form.addEventListener("submit", function (dets) {
     }
   });
 });
+
+let abcd = document.querySelector("#abcd");
+
+abcd.addEventListener("mouseover", function () {
+  abcd.style.backgroundColor = "yellow";
+});
+
+abcd.addEventListener("mouseout", function () {
+  abcd.style.backgroundColor = "red";
+});
+
+// window.addEventListener("mousemove", function(dets){
+//   abcd.style.top = dets.clientY + "px";
+//   abcd.style.left = dets.clientX + "px";
+// })
+
+
+
+// Event bubbling and Capturing
+
+
+// Jab bhi hum click krte hai ya koi bhi event raise krte hai to aapka jo event flow hai vo 2 phases
+// mein chalta hai:
+
+// phase 1: Event top level element se neeche ki taraf aayega (capture phase)
+// phase 2: Event raised element se parent ki taraf jaayega (bubble phase)
+
+// aur phle hamesha phase 1 hoti hai par vo by default off hoti hai, agar hum usee on krde to phle
+// phase 1 ka answer milega
+
+
+
+// Event bubbling
+
+// Jispe event aayega agar uspe listener nhi hua to hamara event uske parent pe listener dhundega
+// aur aesa krte krte upar ki taraf move krega
+
+// but agar usko listener mil bhi gya tabhi bhi vo upar parent ke listeners dhundega hi aur unhe
+// chalayega hi
+
+// button does not have an event listener but when we click on it this will run because nav is parent
+// of button. agar button pe listener hota tab dono chalege
+
+document.querySelector("#nav").addEventListener("click", function () {
+  alert("Clicked");
+});
+
+// Event Delegation is a pattern used to handle events efficiently by attaching a single event listener 
+// to a parent element instead of adding listeners to multiple similar child elements, and 
+// then identifying the actual source of the event using the event.target property.
+document.querySelector("ul").addEventListener("click", function (evt) {
+  evt.target.classList.toggle("lt");
+});
+
+let a = document.querySelector(".a");
+let b = document.querySelector(".b");
+let c = document.querySelector(".c");
+let btn2 = document.querySelector("#btn2");
+
+btn2.addEventListener("click", function () {
+  console.log("button clicked");
+});
+
+c.addEventListener("click", function () {
+  console.log("c Clicked");
+});
+
+b.addEventListener("click", function () {
+  console.log("b Clicked");
+});
+
+a.addEventListener("click", function () {
+  console.log("a Clicked");
+});
+
+
+// Event Capturing
+
+// Event capturing basicaly means aapne jaha bhi kisi event ko occur kra pattern niche se upar ki taraf
+// nhi upar se niche ki taraf aayega.
+
+// event capturing or phase 1 ko activate krne ke liye kisi bhi listener ke last me function ke curly
+// braches ke baad , lgake true likh dege to capturing on hojayegi aur phase 1 chalega
+
+let d = document.querySelector(".d");
+let e = document.querySelector(".e");
+let f = document.querySelector(".f");
+let btn3 = document.querySelector("#btn3");
+
+btn3.addEventListener("click", function () {
+  console.log("button clicked");
+}, true);
+
+d.addEventListener("click", function () {
+  console.log("d Clicked");
+});
+
+e.addEventListener("click", function () {
+  console.log("e Clicked");
+}, true);
+
+f.addEventListener("click", function () {
+  console.log("f Clicked");
+});
