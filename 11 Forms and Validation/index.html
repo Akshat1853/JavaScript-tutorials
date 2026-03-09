@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f2f2f2;
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        width: 350px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+
+      .error {
+        color: red;
+        font-size: 14px;
+        display: none;
+      }
+
+      #resultMessage {
+        margin-top: 15px;
+        color: green;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Login Form</h2>
+
+      <form>
+        <div class="input-group">
+          <input type="text" id="email" placeholder="Enter Email" />
+          <div id="emailError" class="error"></div>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Enter Password" />
+          <div id="passwordError" class="error"></div>
+        </div>
+
+        <button type="submit">Submit</button>
+
+        <div id="resultMessage"></div>
+      </form>
+    </div>
+
+    <script src="script11.js"></script>
+  </body>
+</html>
