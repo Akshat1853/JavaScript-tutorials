@@ -1,0 +1,297 @@
+/* =====================================
+   GLOBAL RESET
+   Removes default margin/padding and 
+   sets consistent box-sizing
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================
+   BODY STYLING
+   Centers the whole app vertically
+   and horizontally
+===================================== */
+
+body {
+  background: #f7f7f7;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =====================================
+   APP LAYOUT
+   3-column grid layout
+   [ Left Buttons | Cards | Category Dots ]
+===================================== */
+
+.app {
+  display: grid;
+  grid-template-columns: auto 320px auto;
+  align-items: center;
+  column-gap: 120px;
+}
+
+/* =====================================
+   LEFT CONTROL BUTTONS
+   (+ , ↑ , ↓)
+===================================== */
+
+.left-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-self: center;
+}
+
+/* Individual button styling */
+
+.left-buttons button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: white;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================
+   CARD STACK CONTAINER
+   Cards are positioned on top of each other
+===================================== */
+
+.stack {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =====================================
+   INDIVIDUAL CARD
+===================================== */
+
+.card {
+  position: absolute;
+  width: 100%;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+/* Profile avatar image */
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Name inside card */
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+/* Info rows (Home town / Purpose) */
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Container for card buttons */
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+/* Call button */
+
+.call {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Message button */
+
+.msg {
+  border: none;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =====================================
+   CATEGORY DOTS (RIGHT SIDE)
+   Represent different note categories
+===================================== */
+
+.category-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-self: center;
+}
+
+/* Individual colored dot */
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+/* Dot colors */
+
+.black {
+  background: black;
+}
+.purple {
+  background: #7c3aed;
+}
+.orange {
+  background: #f59e0b;
+}
+.green {
+  background: #10b981;
+}
+
+/* =====================================
+   FORM MODAL
+   Full screen overlay for creating notes
+===================================== */
+
+.form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Form box container */
+
+.form-box {
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form layout */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Text inputs */
+
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* =====================================
+   CATEGORY CHIP BUTTONS
+===================================== */
+
+.category-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Individual chip */
+
+.chip {
+  border-radius: 20px;
+  padding: 8px 14px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Category colors */
+
+.emergency {
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+.important {
+  border: 1px solid #f59e0b;
+  color: #f59e0b;
+}
+
+.urgent {
+  border: 1px solid #7c3aed;
+  color: #7c3aed;
+}
+
+.norush {
+  border: 1px solid gray;
+  color: gray;
+}
+
+/* =====================================
+   FORM BUTTONS
+===================================== */
+
+/* Submit button */
+
+.submit-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Close form button */
+
+.closeForm {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}

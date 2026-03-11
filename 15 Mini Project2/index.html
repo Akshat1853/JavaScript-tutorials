@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Notes</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ============================= -->
+    <!-- MAIN APPLICATION CONTAINER -->
+    <!-- ============================= -->
+    <div class="app">
+      <!-- LEFT SIDE CONTROL BUTTONS -->
+      <div class="left-buttons">
+        <!-- Button to open form and add new card -->
+        <button id="add-note">+</button>
+
+        <!-- Button to move card stack upward -->
+        <button id="upBtn">↑</button>
+
+        <!-- Button to move card stack downward -->
+        <button id="downBtn">↓</button>
+      </div>
+
+      <!-- ============================= -->
+      <!-- CARD STACK AREA -->
+      <!-- Cards will be dynamically added here using JavaScript -->
+      <!-- ============================= -->
+      <div class="stack"></div>
+
+      <!-- ============================= -->
+      <!-- CATEGORY FILTER DOTS -->
+      <!-- These represent different categories -->
+      <!-- ============================= -->
+      <div class="category-dots">
+        <!-- Black dot -->
+        <div class="dot black"></div>
+
+        <!-- Purple dot -->
+        <div class="dot purple"></div>
+
+        <!-- Orange dot -->
+        <div class="dot orange"></div>
+
+        <!-- Green dot -->
+        <div class="dot green"></div>
+      </div>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- FORM MODAL (POPUP FORM FOR NEW CARD) -->
+    <!-- Appears when "+" button is clicked -->
+    <!-- ===================================== -->
+    <div class="form-container">
+      <!-- Form box -->
+      <div class="form-box">
+        <!-- Form heading -->
+        <h2>New Call</h2>
+
+        <!-- Form begins -->
+        <form>
+          <!-- Image URL input -->
+          <label>Image URL</label>
+          <input
+            type="text"
+            placeholder="https://example.com/photo.jpg"
+            required
+          />
+
+          <!-- Full Name input -->
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" required />
+
+          <!-- Home town input -->
+          <label>Home Town</label>
+          <input type="text" placeholder="Enter home town" required />
+
+          <!-- Purpose input -->
+          <label>Purpose</label>
+          <input
+            type="text"
+            placeholder="e.g., Quick appointment note"
+            required
+          />
+
+          <!-- Category selection -->
+          <label>Category</label>
+
+          <!-- Category radio buttons -->
+          <div class="category-options">
+            <!-- Emergency category -->
+            <label class="chip emergency">
+              <input type="radio" name="category" value="emergency" />
+              Emergency
+            </label>
+
+            <!-- Important category -->
+            <label class="chip important">
+              <input type="radio" name="category" value="important" />
+              Important
+            </label>
+
+            <!-- Urgent category -->
+            <label class="chip urgent">
+              <input type="radio" name="category" value="urgent" />
+              Urgent
+            </label>
+
+            <!-- No rush category -->
+            <label class="chip norush">
+              <input type="radio" name="category" value="norush" />
+              No Rush
+            </label>
+          </div>
+
+          <!-- Form submit button -->
+          <button class="submit-btn">Create Note</button>
+        </form>
+
+        <!-- Button to close the form modal -->
+        <button class="closeForm">Close</button>
+      </div>
+    </div>
+
+    <!-- External JavaScript file -->
+    <script src="script15.js"></script>
+  </body>
+</html>
