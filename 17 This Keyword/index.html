@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-slate-900 min-h-screen flex flex-col items-center p-10 text-white"
+  >
+    <!-- Add User Form -->
+
+    <div
+      class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-8 w-[380px] mb-10"
+    >
+      <h2 class="text-2xl font-bold text-center mb-6">Add User</h2>
+
+      <form class="flex flex-col gap-4">
+        <div>
+          <label class="text-sm">Name</label>
+          <input
+            id="name"
+            type="text"
+            class="w-full mt-1 p-2 rounded bg-white/20 outline-none"
+          />
+        </div>
+
+        <div>
+          <label class="text-sm">Role</label>
+          <input
+            id="role"
+            type="text"
+            class="w-full mt-1 p-2 rounded bg-white/20 outline-none"
+          />
+        </div>
+
+        <div>
+          <label class="text-sm">Bio</label>
+          <textarea
+            id="bio"
+            class="w-full mt-1 p-2 rounded bg-white/20 outline-none"
+          ></textarea>
+        </div>
+
+        <div>
+          <label class="text-sm">Photo URL</label>
+          <input
+            id="photo"
+            type="text"
+            class="w-full mt-1 p-2 rounded bg-white/20 outline-none"
+          />
+        </div>
+
+        <button
+          class="mt-3 bg-slate-700 hover:bg-slate-600 transition p-2 rounded"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Users Container -->
+
+    <users></users>
+
+    <div class="users flex flex-wrap justify-center gap-8"></div>
+
+    <script src="script17.js"></script>
+  </body>
+</html>
