@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Optimization</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-color: black;
+      }
+
+      h1 {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .spacer {
+        height: 600px; /* used to create scroll space */
+      }
+
+      .lazy-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 30px 0;
+
+        /* Initially hidden (image not loaded yet) */
+        opacity: 0;
+
+        /* Smooth fade-in effect when loaded */
+        transition: opacity 0.5s ease;
+      }
+
+      .lazy-img.loaded {
+        /* When JS adds 'loaded' class → image becomes visible */
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Input field (not related to lazy loading, just extra UI) -->
+    <input type="text" placeholder="Type something..." />
+
+    <h1>Lazy Loading Images with Intersection Observer</h1>
+
+    <div class="container">
+      <p>Scroll down to see images load only when they enter the viewport 👇</p>
+
+      <div class="spacer"></div>
+
+      <!-- 
+      IMPORTANT: data-src vs src
+
+      ❌ We are NOT using "src" initially
+      → So browser does NOT load the image immediately
+
+      ✅ data-src stores the actual image URL
+      → JavaScript will assign it to "src" ONLY when image enters viewport
+
+      This is the core idea of LAZY LOADING
+    -->
+      <img
+        data-src="https://img.freepik.com/free-photo/lavender-field-sunset-near-valensole_268835-3910.jpg?semt=ais_rp_progressive&w=740&q=80"
+        class="lazy-img"
+        alt="Image 1"
+      />
+
+      <div class="spacer"></div>
+
+      <!-- Same concept applied -->
+      <img
+        data-src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630"
+        class="lazy-img"
+        alt="Image 2"
+      />
+
+      <div class="spacer"></div>
+
+      <img
+        data-src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg"
+        class="lazy-img"
+        alt="Image 3"
+      />
+
+      <div class="spacer"></div>
+
+      <img
+        data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9YYh5Fk1u9VsWWr1MhkyQeOzeNbtnnMO96g&s"
+        class="lazy-img"
+        alt="Image 4"
+      />
+    </div>
+
+    <h1>Code Splitting with Dynamic Import</h1>
+    <button id="btn">Click to Load Heavy Module</button>
+
+    <ul></ul>
+
+    <script type="module" src="script21.js"></script>
+  </body>
+</html>
